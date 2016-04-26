@@ -5,8 +5,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -45,7 +45,11 @@ public class MainActivity extends AppCompatActivity {
 //                GridLayoutManager – Displays items in a grid.
 //                StaggeredGridLayoutManager – Displays items in a staggered grid.
 //        You can create a custom LayoutManager by extending RecyclerView.LayoutManager or one of the implementations above and overriding the methods required.
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        // làm 2 côt theo chiều doc
+        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
+
 
 
         // animation recycler view, dò xem recycler của mình có action gì để hành động tương ứng
